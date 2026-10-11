@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "session-archive"
+version = "0.1.0"
+description = "Archive Claude Code session logs before the 30-day auto-delete: gzip + searchable index + restore"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "hao li", email = "haoli5933@gmail.com" }]
+keywords = ["claude-code", "session", "archive", "backup", "cli", "jsonl"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Archiving :: Backup",
+]
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/session-archive"
+Repository = "https://github.com/hahahahahahahahah6/session-archive"
+
+[project.scripts]
+session-archive = "session_archive.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
